@@ -1,0 +1,153 @@
+.about {
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #0A0A0A 0%,
+    #0A1F0A 50%,
+    #000000 100%
+  );
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(57, 255, 20, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  color: var(--light);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: var(--light);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: var(--light);
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 6rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .about-text {
+    font-size: 1.05rem;
+  }
+  
+  .stats {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}

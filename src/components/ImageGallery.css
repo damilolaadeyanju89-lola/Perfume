@@ -1,0 +1,252 @@
+.image-gallery {
+  padding: 8rem 2rem;
+  background: var(--dark);
+  position: relative;
+}
+
+.image-gallery::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 255, 65, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.image-gallery .gallery-header {
+  margin-bottom: 5rem;
+}
+
+.image-gallery .section-title {
+  color: var(--light);
+}
+
+.image-gallery .section-description {
+  color: var(--light);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+  gap: 2.5rem;
+}
+
+.image-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(0, 255, 65, 0.03);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.image-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 2px 6px rgba(0, 255, 65, 0.03);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 65, 0.2) 0%,
+    rgba(57, 255, 20, 0.2) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 65, 0.2) 0%,
+    rgba(57, 255, 20, 0.2) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: var(--light);
+  z-index: 1;
+}
+
+.placeholder-content span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.placeholder-content p {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.image-details {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.image-category {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.image-details h3 {
+  font-size: 1.8rem;
+  color: var(--light);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.image-details p {
+  font-size: 1rem;
+  color: var(--light);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+  padding: 0.7rem 2rem;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.explore-btn:hover {
+  background: var(--primary);
+  color: #000000;
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .image-gallery {
+    padding: 6rem 1.5rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+    padding: 4rem 1.5rem;
+  }
+  
+  .image-gallery .gallery-header {
+    margin-bottom: 3rem;
+  }
+  
+  .image-gallery .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .image-placeholder {
+    height: 300px;
+  }
+  
+  .image-details {
+    padding: 1.5rem;
+  }
+  
+  .image-details h3 {
+    font-size: 1.5rem;
+  }
+  
+  .image-details p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    padding: 3rem 1rem;
+  }
+  
+  .image-gallery .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .image-placeholder {
+    height: 250px;
+  }
+  
+  .placeholder-content span {
+    font-size: 2rem;
+  }
+  
+  .placeholder-content p {
+    font-size: 1rem;
+  }
+  
+  .image-details h3 {
+    font-size: 1.3rem;
+  }
+}
