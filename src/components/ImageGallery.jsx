@@ -7,43 +7,43 @@ const ImageGallery = () => {
       title: "Midnight Bloom",
       category: "Floral Collection",
       description: "Delicate jasmine with rose petals",
-      src: "/resources/IMG_6126.JPG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6126.JPG`
     },
     {
       title: "Azure Dreams",
       category: "Fresh Collection",
       description: "Crisp bergamot and sea salt",
-      src: "/resources/IMG_6127.JPG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6127.JPG`
     },
     {
       title: "Golden Amber",
       category: "Oriental Collection",
       description: "Warm vanilla and amber essence",
-      src: "/resources/IMG_6130.PNG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6130.PNG`
     },
     {
       title: "Citrus Sunrise",
       category: "Citrus Collection",
       description: "Zesty mandarin and grapefruit",
-      src: "/resources/IMG_6131.PNG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6131.PNG`
     },
     {
       title: "Noir Velvet",
       category: "Luxury Collection",
       description: "Sensual oud and sandalwood",
-      src: "/resources/IMG_6132.PNG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6132.PNG`
     },
     {
       title: "Pure Grace",
       category: "Signature Collection",
       description: "Soft musk and white florals",
-      src: "/resources/IMG_6133.PNG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6133.PNG`
     },
     {
       title: "Emerald Mystique",
       category: "Limited Edition",
       description: "Exotic bergamot and green tea",
-      src: "/resources/IMG_6134.PNG"
+      src: `${import.meta.env.BASE_URL}resources/IMG_6134.PNG`
     }
   ];
 

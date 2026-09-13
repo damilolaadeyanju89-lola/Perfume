@@ -18,7 +18,7 @@ const VideoGallery = () => {
           <div className="video-item large">
             <div className="video-placeholder">
               <video className="video-media" autoPlay loop muted playsInline>
-                <source src="/resources/flowers.MP4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}resources/flowers.MP4`} type="video/mp4" />
               </video>
             </div>
             <div className="video-info">
@@ -31,7 +31,7 @@ const VideoGallery = () => {
           <div className="video-item">
             <div className="video-placeholder">
               <video className="video-media" autoPlay loop muted playsInline>
-                <source src="/resources/butterfly.MP4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}resources/butterfly.MP4`} type="video/mp4" />
               </video>
             </div>
             <div className="video-info">
@@ -44,7 +44,7 @@ const VideoGallery = () => {
           <div className="video-item">
             <div className="video-placeholder">
               <video className="video-media" autoPlay loop muted playsInline>
-                <source src="/resources/VIGW6037.MP4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}resources/VIGW6037.MP4`} type="video/mp4" />
               </video>
             </div>
             <div className="video-info">
