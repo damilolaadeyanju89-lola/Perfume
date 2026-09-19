@@ -13,7 +13,7 @@ const Hero = () => {
           muted 
           playsInline
         >
-          <source src="/resources/HOME1.MP4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}resources/HOME1.MP4`} type="video/mp4" />
         </video>
         <div className="video-overlay"></div>
       </div>
